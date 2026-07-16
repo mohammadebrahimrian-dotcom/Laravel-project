@@ -1,0 +1,22 @@
+Sarafi-Management-System/
+
+│
+├── client/
+│     React
+│
+├── server/
+│     Laravel
+│
+├── database/
+│     SQL Scripts
+│
+├── docs/
+│     SRS
+│     ERD
+│     Use Cases
+│     API Documentation
+│
+├── design/
+│     Figma
+│
+└── README.md
