@@ -22,27 +22,65 @@
     <p class="muted">Enter the customer's information.</p>
 
     <div class="card">
-        <form action="{{ route('customers.store') }}" method="POST">
-            @csrf
+       
+<form action="{{ route('customers.store') }}" method="POST">
+    @csrf
 
-            <div class="form-group">
-                <label for="name">Customer Name</label>
-                <input id="name" type="text" name="name" placeholder="Enter full name" required>
-            </div>
+    @if ($errors->any())
+        <div class="card">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li style="color: red;">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input id="phone" type="tel" name="phone" placeholder="Enter phone number" required>
-            </div>
+    <div class="form-group">
+        <label for="name">Customer Name</label>
+        <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Enter full name"
+            value="{{ old('name') }}"
+            required
+        >
+    </div>
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input id="email" type="email" name="email" placeholder="Enter email address" required>
-            </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input
+            id="phone"
+            type="tel"
+            name="phone"
+            placeholder="Enter phone number"
+            value="{{ old('phone') }}"
+            required
+        >
+    </div>
 
-            <button class="btn btn-success" type="submit">Save Customer</button>
-            <a class="btn btn-secondary" href="{{ route('customers.index') }}">Cancel</a>
-        </form>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter email address"
+            value="{{ old('email') }}"
+            required
+        >
+    </div>
+
+    <button class="btn btn-success" type="submit">
+        Save Customer
+    </button>
+
+    <a class="btn btn-secondary" href="{{ route('customers.index') }}">
+        Cancel
+    </a>
+</form>
+
     </div>
 </main>
 

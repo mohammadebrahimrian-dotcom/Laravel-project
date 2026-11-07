@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class featureController extends Controller
+class LoginController extends Controller
 {
-    public function index(){
+    // Display login page
+    public function index()
+    {
         return view('login');
     }
 }

@@ -44,6 +44,20 @@
                         <td>
                             <a class="btn btn-primary" href="{{ route('billing.show', $bill['id']) }}">View</a>
                             <a class="btn btn-warning" href="{{ route('billing.edit', $bill['id']) }}">Edit</a>
+                            
+<form action="{{ route('billing.destroy', $bill['id']) }}"
+      method="POST"
+      style="display: inline;">
+    @csrf
+    @method('DELETE')
+
+    <button class="btn btn-danger"
+            type="submit"
+            onclick="return confirm('Are you sure you want to delete this bill?')">
+        Delete
+    </button>
+</form>
+
                         </td>
                     </tr>
                 @empty

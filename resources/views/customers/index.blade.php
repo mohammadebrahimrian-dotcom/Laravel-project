@@ -41,10 +41,36 @@
                         <td>{{ $customer['name'] }}</td>
                         <td>{{ $customer['phone'] }}</td>
                         <td>{{ $customer['email'] }}</td>
-                        <td>
+                        <!-- <td>
                             <a class="btn btn-primary" href="{{ route('customers.show', $customer['id']) }}">View</a>
                             <a class="btn btn-warning" href="{{ route('customers.edit', $customer['id']) }}">Edit</a>
-                        </td>
+                        </td> -->
+                        
+<td>
+    <a class="btn btn-primary"
+       href="{{ route('customers.show', $customer['id']) }}">
+        View
+    </a>
+
+    <a class="btn btn-warning"
+       href="{{ route('customers.edit', $customer['id']) }}">
+        Edit
+    </a>
+
+    <form action="{{ route('customers.destroy', $customer['id']) }}"
+          method="POST"
+          style="display: inline;">
+        @csrf
+        @method('DELETE')
+
+        <button type="submit"
+                class="btn btn-danger"
+                onclick="return confirm('Are you sure you want to delete this customer?')">
+            Delete
+        </button>
+    </form>
+</td>
+
                     </tr>
                 @empty
                     <tr><td colspan="5">No customers found.</td></tr>

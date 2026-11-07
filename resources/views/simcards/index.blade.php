@@ -44,6 +44,21 @@
                         <td>
                             <a class="btn btn-primary" href="{{ route('simcards.show', $simcard['id']) }}">View</a>
                             <a class="btn btn-warning" href="{{ route('simcards.edit', $simcard['id']) }}">Edit</a>
+                            
+<form action="{{ route('simcards.destroy', $simcard['id']) }}"
+      method="POST"
+      style="display: inline;">
+
+    @csrf
+    @method('DELETE')
+
+    <button class="btn btn-danger"
+            type="submit"
+            onclick="return confirm('Are you sure you want to delete this SIM card?')">
+        Delete
+    </button>
+</form>
+
                         </td>
                     </tr>
                 @empty

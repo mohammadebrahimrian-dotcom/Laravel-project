@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "number": "0700000001",
+        "type": "Postpaid",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "number": "0700000002",
+        "type": "Postpaid",
+        "status": "Active"
+    },
+    {
+        "number": "0700800900",
+        "type": "Prepaid",
+        "status": "Active",
+        "id": 3
+    }
+]

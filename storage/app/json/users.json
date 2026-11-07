@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Ahmad",
+        "email": "ahmad@example.com",
+        "phone": "0700000001",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "name": "Mohammad",
+        "email": "mohammad@example.com",
+        "phone": "0700000002",
+        "role": "Customer",
+        "status": "Active"
+    },
+    {
+        "name": "Mohammad Ebrahim Rian",
+        "email": "mohammadebrahimrian@gmail.com",
+        "phone": "0700800900",
+        "role": "Admin",
+        "status": "Active",
+        "id": 3
+    }
+]

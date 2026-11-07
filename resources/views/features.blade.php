@@ -1,54 +1,16 @@
-<!DOCTYPE html>
-<html lang="ps" dir="rtl">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ځانګړتیاوې - AWCC سیستم</title>
-    <!-- <link rel="stylesheet" href="style.css">
-      -->
+@extends('layouts.app')
 
-      <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@section('title', 'ځانګړتیاوې - AWCC سیستم')
 
-</head>
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@endpush
 
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">📡</span>
-                <span>AWCC سیستم</span>
-            </a>
-            <!-- ✅ Hidden Checkbox -->
-            <input type="checkbox" id="menu-toggle">
-            <!-- ✅ Hamburger -->
-            <label for="menu-toggle" class="mobile-menu-toggle">
-<span></span>
-<span></span>
-<span></span>
-</label>
+@section('content')
 
-            <!
-<nav>
-            <ul class="nav-links">
-                <li><a href="index.html">کور پاڼه</a></li>
-                <li><a href="features.html">ځانګړتیاوې</a></li>
-                <li><a href="customers.html">مشتریان</a></li>
-                <li><a href="simcards.html">سیم کارتونه</a></li>
-                <li><a href="billing.html">بیلنګ</a></li>
-                <li><a href="contact.html">اړیکه</a></li>
-            </ul>
+<main id="main-content">
 
-            <div class="nav-buttons">
-                <a href="#" class="btn btn-secondary">ننوتل</a>
-                <a href="#" class="btn btn-highlight">نوم لیکنه</a>
-            </div>
-            </nav>
-        </div>
-    </header>
-
-    <main id="main-content">
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
@@ -88,7 +50,7 @@
                     </div>
 
                     <div class="feature-detail">
-                        <div class="feature-detail-icon"><img src="icons8-call-50.png" alt="" width="50px"></div>
+                        <div class="feature-detail-icon"><img src="{{ asset('icons8-call-50.png') }}" alt="" width="50"></div>
                         <h3>د غوښتنلیکونو تعقیب</h3>
                         <p>دا ماډل د ټولو غوښتنلیکونو ریکارډونه ساتي. تاسو کولای شئ:</p>
                         <ul>
@@ -204,46 +166,8 @@
                 </div>
             </div>
         </section>
-    </main>
+  
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>د اړیکې معلومات</h3>
-                    <p>📶 کابل، افغانستان</p>
-                    <p>📞 0700123456</p>
-                    <p>✉️ info@awcc.af</p>
-                </div>
-                <div class="footer-section">
-                    <h3>تړل شوي لینکونه</h3>
-                    <a href="index.html">کور پاڼه</a>
-                    <a href="features.html">ځانګړتیاوې</a>
-                    <a href="customers.html">مشتریان</a>
-                    <a href="simcards.html">سیم کارتونه</a>
-                </div>
-                <div class="footer-section">
-                    <h3>قانوني معلومات</h3>
-                    <a href="#">د محرمیت پالیسي</a>
-                    <a href="#">د کارونې شرایط</a>
-                    <a href="#">د تادیې شرایط</a>
-                </div>
-                <div class="footer-section">
-                    <h3>ټولې اړیکی</h3>
-                    <div class="social-links">
-                        <a href="#" class="Facebook"><img src="facebook.png" alt="" width="40px"></a>
-                        <a href="#" class="Twitter"><img src="icons8-twitter-50.png" alt="" width="40px"></a>
-                        <a href="#" class="Instagram"><img src="instagram.png" alt="" width="40px"></a>
-                        <a href="#" class="LinkedIn"><img src="3d-linkedin-logo-icon-isolated-on-transparent-background-free-png.png" alt="" width="40px"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 د افغان وایرلس مخابراتي شرکت. ټول حقونه خوندي دي.</p>
-            </div>
-        </div>
-    </footer>
-</body>
+</main>
 
-</html>
+@endsection

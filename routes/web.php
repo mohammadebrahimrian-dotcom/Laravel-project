@@ -2,45 +2,56 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\SimcardController;
 use App\Http\Controllers\BillingController;
+use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\FeaturesController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ServiceController;
 
-// Existing AWCC website routes
-Route::get('/index', function () {
-    return view('index');
+
+// ==================================
+// PUBLIC AWCC WEBSITE ROUTES
+// ==================================
+
+Route::view('/index', 'index');
+Route::view('/features', 'features');
+Route::view('/customers', 'customers');
+Route::view('/simcards', 'simcards');
+Route::view('/contact', 'contact');
+Route::view('/billing', 'billing');
+Route::view('/login', 'Login');
+
+
+// ==================================
+// ADMIN LOGIN ROUTE
+// ==================================
+
+Route::get('/manage/login', [LoginController::class, 'index'])
+    ->name('manage.login');
+
+
+// ==================================
+// RESOURCE ROUTES - MIDTERM PROJECT
+// ==================================
+
+Route::prefix('manage')->group(function () {
+
+    Route::resource('customers', CustomerController::class);
+
+    Route::resource('simcards', SimcardController::class);
+
+    Route::resource('billing', BillingController::class);
+
+    Route::resource('contact-messages', ContactMessageController::class);
+
+    Route::resource('users', UserController::class);
+
+    Route::resource('features', FeaturesController::class);
+
+    Route::resource('services', ServiceController::class);
+
 });
-
-Route::get('/features', function () {
-    return view('features');
-});
-
-Route::get('/customers', function () {
-    return view('customers');
-});
-
-Route::get('/simcards', function () {
-    return view('simcards');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/billing', function () {
-    return view('billing');
-});
-
-Route::get('/Login', function () {
-    return view('Login');
-});
-
-// Resource routes for the assignment
-Route::resource('manage/customers', CustomerController::class)
-    ->names('customers');
-
-Route::resource('manage/simcards', SimcardController::class)
-    ->names('simcards');
-
-Route::resource('manage/billing', BillingController::class)
-    ->names('billing');

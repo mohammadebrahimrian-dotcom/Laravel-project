@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Internet Package",
+        "description": "Mobile Internet service",
+        "price": "70",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "name": "Voice Package",
+        "description": "Voice calling service",
+        "price": 50,
+        "status": "Active"
+    },
+    {
+        "id": 3,
+        "name": "SMS Package",
+        "description": "SMS messaging service",
+        "price": 20,
+        "status": "Inactive"
+    }
+]

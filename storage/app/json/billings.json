@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "customer": "Ahmad",
+        "amount": "500",
+        "status": "Paid"
+    },
+    {
+        "customer": "Mohammad Ebrahim Rian",
+        "amount": "500",
+        "status": "Paid",
+        "id": 2
+    },
+    {
+        "customer": "osman",
+        "amount": "13000",
+        "status": "Paid",
+        "id": 3
+    }
+]

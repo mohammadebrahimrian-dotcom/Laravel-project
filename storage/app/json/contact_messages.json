@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Ahmadd",
+        "email": "ahmad@example.com",
+        "subject": "Internet Service",
+        "message": "I want information about internet packages. test",
+        "status": "New"
+    },
+    {
+        "id": 2,
+        "name": "Mohammad",
+        "email": "mohammad@example.com",
+        "subject": "Customer Support edited",
+        "message": "I need help with my SIM card.",
+        "status": "Read"
+    },
+    {
+        "name": "Mohammad Ebrahim Rian",
+        "email": "mohammadebrahimrian@gmail.com",
+        "subject": "Customer Support addeed",
+        "message": "kjsndfkjdhjk",
+        "status": "Read",
+        "id": 3
+    }
+]
